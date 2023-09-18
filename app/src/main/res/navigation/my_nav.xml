@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/foodFragment">
+
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.example.a2foodapp.Fragment.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" >
+        <action
+            android:id="@+id/action_foodFragment_to_drinkFragment"
+            app:destination="@id/drinkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinkFragment"
+        android:name="com.example.a2foodapp.Fragment.DrinkFragment"
+        android:label="fragment_drink"
+        tools:layout="@layout/fragment_drink" >
+        <action
+            android:id="@+id/action_drinkFragment_to_trangMiengFragment"
+            app:destination="@id/trangMiengFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trangMiengFragment"
+        android:name="com.example.a2foodapp.Fragment.FreshFragment"
+        android:label="fragment_trang_mieng"
+        tools:layout="@layout/fragment_trang_mieng" >
+        <action
+            android:id="@+id/action_trangMiengFragment_to_hoaDonFragment"
+            app:destination="@id/hoaDonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hoaDonFragment"
+        android:name="com.example.a2foodapp.Fragment.HoaDonFragment"
+        android:label="fragment_hoa_don"
+        tools:layout="@layout/fragment_hoa_don" />
+</navigation>
